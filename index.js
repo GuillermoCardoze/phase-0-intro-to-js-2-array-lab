@@ -1,53 +1,36 @@
 
-// Write your solution here!
 const cats = ["Milo", "Otis", "Garfield"];
-
-function destructivelyAppendCat(Ralph){
-    cats.push(Ralph);
+function destructivelyAppendCat(name){
+  cats.push(name)
+  return cats;
 }
-
-function destructivelyPrependCat(Bob){
-    cats.unshift(Bob);
+function destructivelyPrependCat(name){
+  cats.unshift(name)
+  return cats;
 }
-
-   function destructivelyRemoveLastCat(Ralph){
-    cats.pop(Ralph);
-   }
-
-   function destructivelyRemoveFirstCat(Bob){
-    cats.shift(Bob);
-   }
-
-   function appendCat(Broom) {
-
-    const newCatsArray = [...cats];
-  
-
-    newCatsArray.push(Broom);
-  
-   
-    return newCatsArray;
-  }
-
-  function prependCat(Arnold) {
-    const newCatsArray = [...cats];
-    newCatsArray.unshift(Arnold);
-    return newCatsArray;
-  }
-
-  function removeLastCat() {
-    
-    const newCatsArray = [...cats];
-  
-  
-    newCatsArray.pop();
-  
-  
-    return newCatsArray;
-  }
-
-function  removeFirstCat() {
-    const newCatsArray = [...cats];
-    newCatsArray.shift();
-    return newCatsArray;
+function destructivelyRemoveLastCat(name){
+  cats.pop()
+  return cats;
+}
+function destructivelyRemoveFirstCat(name){
+  cats.shift()
+  return cats;
+}
+function appendCat(name){
+  let Broom = [...cats, name];
+  return Broom;
+}
+function prependCat(name){
+  let Arnold = [name,...cats];
+  return Arnold;
+}
+function removeLastCat(name){
+  const newCatArray = [...cats]
+  newCatArray.pop()
+  return newCatArray;
+}
+function removeFirstCat(name){
+  const newCatArray = [...cats]
+  newCatArray.shift()
+  return newCatArray;
 }
